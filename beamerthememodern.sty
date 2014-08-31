@@ -36,6 +36,8 @@
 \setbeamercolor{block title alerted}{bg=modernRed, fg=modernWhite}
 \setbeamercolor{block body alerted}{parent=palette quaternary}
 
+\setbeamercolor{structure}{fg=modernBlue1}
+
 
 % -- custom fonts -- %
 \usepackage{fontspec}
@@ -64,6 +66,8 @@
 \setbeamerfont{block body example}{family=\modernFontLight}
 \setbeamerfont{block title alerted}{family=\modernFontNormal}
 \setbeamerfont{block body alerted}{family=\modernFontLight}
+
+\setbeamerfont{page number in head/foot}{family=\modernFontBold}
 
 % -- beamer frame title -- %
 \setbeamertemplate{frametitle}{
@@ -97,5 +101,13 @@
 \setbeamertemplate{itemize subitem}{\modernBullet}
 \setbeamertemplate{itemize subsubitem}{\modernBullet}
 
-% -- suppress navigation bar -- %
-\beamertemplatenavigationsymbolsempty
+% -- footline -- %
+\usenavigationsymbolstemplate{}
+\setbeamertemplate{footline} {
+    \begin{beamercolorbox}[wd=\textwidth,ht=3ex,dp=1.5ex,leftskip=0.3cm,rightskip=0.3cm]{structure}
+    \hfill\usebeamerfont{page number in head/foot}
+    \insertframenumber
+    \end{beamercolorbox}
+}
+
+\mode<all>
