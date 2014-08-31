@@ -1,6 +1,12 @@
-\ProvidesPackage{beamerthememodern}[2014/08/31]
+%
+% Name    : beamerthememodern.sty
+% Author  : Nikolay Obedin (dancingrobot84@gmail.com)
+% Version : 0.1.0
+%
 
+\ProvidesPackage{beamerthememodern}[2014/08/31]
 \mode<presentation>
+
 
 % -- custom colors -- %
 \definecolor{modernWhite}{HTML}{ECF0F1}
@@ -9,6 +15,17 @@
 \definecolor{modernBlue2}{HTML}{3498DB}
 \definecolor{modernGreen}{HTML}{1BAD58}
 \definecolor{modernDarkBlue}{HTML}{2C3E50}
+
+
+% -- custom fonts -- %
+\usepackage{fontspec}
+\newfontfamily{\modernFontLight}{Open Sans Light}
+\newfontfamily{\modernFontNormal}{Open Sans}
+\newfontfamily{\modernFontBold}{Open Sans Bold}
+\newfontfamily{\modernFontExtraBold}{Open Sans Extrabold}
+\setmainfont[Ligatures=TeX]{Open Sans}
+\setsansfont[Ligatures=TeX]{Open Sans}
+
 
 % -- general beamer colors -- %
 \setbeamercolor{palette primary}{bg=modernWhite, fg=modernBlue1}
@@ -39,17 +56,7 @@
 \setbeamercolor{structure}{fg=modernBlue1}
 
 
-% -- custom fonts -- %
-\usepackage{fontspec}
-\newfontfamily{\modernFontLight}{Open Sans Light}
-\newfontfamily{\modernFontNormal}{Open Sans}
-\newfontfamily{\modernFontBold}{Open Sans Bold}
-\newfontfamily{\modernFontExtraBold}{Open Sans Extrabold}
-
 % -- beamer fonts -- %
-\setmainfont{Open Sans}
-\setsansfont{Open Sans}
-
 \setbeamerfont{title}{family=\modernFontExtraBold, size=\fontsize{25}{25}}
 \setbeamerfont{subtitle}{family=\modernFontBold, size=\fontsize{15}{15}}
 \setbeamerfont{author}{family=\modernFontNormal, size=\fontsize{10}{10}}
@@ -69,6 +76,7 @@
 
 \setbeamerfont{page number in head/foot}{family=\modernFontBold}
 
+
 % -- beamer frame title -- %
 \setbeamertemplate{frametitle}{
     \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.3cm,rightskip=0.3cm,ht=3ex,dp=1.5ex]{frametitle}
@@ -76,7 +84,8 @@
     \end{beamercolorbox}
 }
 
-% -- display section name as separate frame -- %
+
+% -- section frame -- %
 \newcommand{\insertsectionHEAD}{\expandafter\insertsectionHEADaux\insertsectionhead}
 \newcommand{\insertsectionHEADaux}[3]{\MakeUppercase{#3}}
 \AtBeginSection[]{
@@ -91,15 +100,18 @@
     \endgroup
 }
 
-% -- toc styles -- %
+
+% -- toc elements -- %
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
 
-% -- itemize bullet styles -- %
+
+% -- itemize bullets -- %
 \newcommand{\modernBullet}{•}
 \setbeamertemplate{itemize item}{\modernBullet}
 \setbeamertemplate{itemize subitem}{\modernBullet}
 \setbeamertemplate{itemize subsubitem}{\modernBullet}
+
 
 % -- footline -- %
 \usenavigationsymbolstemplate{}
@@ -109,5 +121,6 @@
     \insertframenumber
     \end{beamercolorbox}
 }
+
 
 \mode<all>
