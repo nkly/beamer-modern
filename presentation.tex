@@ -1,10 +1,17 @@
 \documentclass[xetex]{beamer}
 
+\usepackage[russian,english]{babel}
+\usepackage{graphicx}
 
-\title[Hello world!]
-    {An example presentation using beamer-modern theme}
+\usetheme{modern}
+
+
+\title
+    {HELLO WORLD!}
+\subtitle
+    {An example presentation using beamer-modern template}
 \author
-    {Nikolay Obedin aka dancingrobot84}
+    {Nikolay Obedin (aka dancingrobot84)}
 
 
 \begin{document}
@@ -13,19 +20,26 @@
 
     \frame{\tableofcontents}
 
-    \section{Hello world!}
+    \section{Hello world}
 
-    \begin{frame}{Hello world!}
-        Hello world!
+    \begin{frame}{Hello world}
+        Hello world! One morning, when \textbf{Gregor Samsa}
+        woke from troubled dreams, he found himself
+        transformed in his bed into a horrible vermin.
+        He lay on his armour-like back, and if he
+        lifted his head a little he could see his brown
+        belly, slightly domed and divided by arches
+        into \textit{stiff sections}. The bedding was hardly
+        able to cover it and seemed ready to slide off
+        any moment. His many legs, pitifully thin
+        compared with the size of the rest of him,
+        waved about helplessly as he looked. "What's
+        happened to me?" he thought. It wasn't a dream.
     \end{frame}
 
-    \begin{frame}{Hello again!}
-        Hello again!
-    \end{frame}
+    \section{Hello lists}
 
-    \section{Hello lists!}
-
-    \begin{frame}{Hello itemize!}
+    \begin{frame}{Hello itemize}
         \begin{itemize}
             \item Item 1
             \item Item 2
@@ -33,12 +47,49 @@
         \end{itemize}
     \end{frame}
 
-    \begin{frame}{Hello enumerate!}
+    \begin{frame}{Hello enumerate}
         \begin{enumerate}
             \item Item 1
             \item Item 2
             \item Item 3
         \end{enumerate}
+    \end{frame}
+
+    \section{Hello math}
+
+    \begin{frame}{Hello math}
+        $$ \sum_{n=1}^\infty \frac{1}{2^n} = 2 $$
+    \end{frame}
+
+    \section{Hello tables}
+
+    \begin{frame}{Hello tables}
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            Name & Age & Score \\
+            \hline
+            John & 10 & 100 \\
+            Alex & 11 & 85 \\
+            Ann  & 9  & 80 \\
+            \hline
+        \end{tabular}
+    \end{frame}
+
+    \section{Hello blocks}
+
+    \begin{frame}{Hello blocks}
+        \begin{block}{Block title}
+            This is just ordinary block
+        \end{block}
+
+        \begin{exampleblock}{Block title}
+            This is an example block
+        \end{exampleblock}
+
+        \begin{alertblock}{Block title}
+            This is an alert block
+        \end{alertblock}
     \end{frame}
 
 \end{document}
